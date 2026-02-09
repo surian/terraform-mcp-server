@@ -204,14 +204,6 @@ func streamableHTTPServerInit(ctx context.Context, hcServer *server.MCPServer, l
 	// Log the endpoint path being used
 	logger.Infof("Using endpoint path: %s", endpointPath)
 
-	// Check if stateless mode is enabled
-	isStateless := shouldUseStatelessMode()
-	if !isStateless {
-		opts = append(opts, server.WithStateLess(isStateless))
-	}
-
-	logger.Infof("Running with stateless mode: %v", isStateless)
-
 	baseStreamableServer := server.NewStreamableHTTPServer(hcServer, opts...)
 
 	// Load CORS configuration
