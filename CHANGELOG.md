@@ -14,6 +14,7 @@ IMPROVEMENTS
 
 FIXES
 
+* `list_runs` was returning empty response
 * List runs was returning empty response [275](https://github.com/hashicorp/terraform-mcp-server/pull/275)
 * Generate session id when `MCP_SESSION_MODE` is `stateless`
 
